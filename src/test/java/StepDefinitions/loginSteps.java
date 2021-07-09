@@ -13,7 +13,11 @@ import java.util.List;
 
 public class loginSteps {
 
-    loginPage login = new loginPage();
+    private final loginPage login;
+
+    public loginSteps(loginPage login) {
+        this.login = login;
+    }
 
     @Given("^Navigate to website$")
     public void navigateToWebsite() {
