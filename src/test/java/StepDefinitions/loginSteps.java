@@ -38,8 +38,8 @@ public class loginSteps {
         login.clickFunction(login.getLoginButton());
     }
 
-    @Then("^User should login successfully$")
-    public void userShouldLoginSuccessfully() {
+    @Then("^User should be login successfully$")
+    public void userShouldBeLoginSuccessfully() {
         login.verifyContainsText(login.getDashboard(), "Dashboard");
     }
 
