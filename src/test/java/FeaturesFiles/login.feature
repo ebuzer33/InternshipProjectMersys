@@ -4,7 +4,7 @@ Feature: Login Functionality
     Given Navigate to website
     When Enter username and password
     And Click to login button
-    Then User should login successfully
+    Then User should be login successfully
     And Click to accept cookies
 
   Scenario:Login with unregistered user information
@@ -12,3 +12,4 @@ Feature: Login Functionality
     When Enter wrong username and password
     And Click to login button
     Then User should not be logged in and should see the error message
+
