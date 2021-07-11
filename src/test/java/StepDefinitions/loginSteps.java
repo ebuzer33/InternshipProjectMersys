@@ -32,14 +32,14 @@ public class loginSteps {
         List<List<String>> list = excelUtility.getListData("src/test/java/Resources/Mersys_Demo.xlsx", "correctLogin", 2);
 
         for (int i = 0; i < list.size(); i++) {
-            login.sendKeysFunction(login.getUserName(), list.get(i).get(0));
-            login.sendKeysFunction(login.getPassword(), list.get(i).get(1));
+            login.findAndSend(login.getUserName(), list.get(i).get(0));
+            login.findAndSend(login.getPassword(), list.get(i).get(1));
         }
     }
 
     @And("^Click to login button$")
     public void clickToLoginButton() {
-        login.clickFunction(login.getLoginButton());
+        login.findAndClick(login.getLoginButton());
     }
 
     @Then("^User should be login successfully$")
@@ -49,7 +49,7 @@ public class loginSteps {
 
     @And("^Click to accept cookies$")
     public void clickToAcceptCookies() {
-        login.clickFunction(login.getCookies());
+        login.findAndClick(login.getCookies());
     }
 
     @When("^Enter wrong username and password$")
@@ -58,8 +58,8 @@ public class loginSteps {
         List<List<String>> list = excelUtility.getListData("src/test/java/Resources/Mersys_Demo.xlsx", "wrongLogin", 2);
 
         for (int i = 0; i < list.size(); i++) {
-            login.sendKeysFunction(login.getUserName(), list.get(i).get(0));
-            login.sendKeysFunction(login.getPassword(), list.get(i).get(1));
+            login.findAndSend(login.getUserName(), list.get(i).get(0));
+            login.findAndSend(login.getPassword(), list.get(i).get(1));
         }
     }
 

@@ -21,14 +21,14 @@ public class parent {
         wait = new WebDriverWait(baseDriver.getDriver(), 15);
     }
 
-    public void sendKeysFunction(WebElement element, String value) {
+    public void findAndSend(WebElement element, String value) {
         waitUntilVisible(element);
         scrollToElement(element);
         element.clear();
         element.sendKeys(value);
     }
 
-    public void clickFunction(WebElement element) {
+    public void findAndClick(WebElement element) {
         waitUntilClickable(element);
         scrollToElement(element);
         element.click();
@@ -83,5 +83,12 @@ public class parent {
         Actions actions = new Actions(baseDriver.getDriver());
         Action action = actions.sendKeys(Keys.ESCAPE).build();
         action.perform();
+    }
+    public void findAndDelete(WebElement... elements) {
+        wait.until(ExpectedConditions.stalenessOf(baseDriver.getDriver().findElement(By.xpath("//ms-delete-button//button"))));
+        waitNumberOfElementsToBeLessThan(By.xpath("//ms-delete-button//button"), 5);
+        findAndClick(elements[0]);
+        findAndClick(elements[1]);
+
     }
 }

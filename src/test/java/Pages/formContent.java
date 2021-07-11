@@ -1,4 +1,5 @@
 package Pages;
 
-public class formContent {
+public class formContent extends parent{
+
 }
