@@ -1,4 +1,3 @@
-//aaa
 
 Feature: create and Delete a Country Functionality
 
