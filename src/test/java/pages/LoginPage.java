@@ -1,14 +1,14 @@
-package Pages;
+package pages;
 
-import Utilities.baseDriver;
+import utilities.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class loginPage extends parent {
+public class LoginPage extends Parent {
 
-    public loginPage() {
-        PageFactory.initElements(baseDriver.getDriver(), this);
+    public LoginPage() {
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
     @FindBy(id = "mat-input-0")

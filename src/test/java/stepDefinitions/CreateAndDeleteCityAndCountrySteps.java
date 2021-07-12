@@ -1,13 +1,14 @@
-package StepDefinitions;
+package stepDefinitions;
+import pages.DialogContent;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
-public class createAndDeleteCityAndCountrySteps {
+public class CreateAndDeleteCityAndCountrySteps {
 
 
-    private final Pages.dialogContent dialogContent;
+    private final DialogContent dialogContent;
 
-    public createAndDeleteCityAndCountrySteps(Pages.dialogContent dialogContent) {
+    public CreateAndDeleteCityAndCountrySteps(DialogContent dialogContent) {
         this.dialogContent = dialogContent;
     }
 

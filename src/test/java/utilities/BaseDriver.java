@@ -1,12 +1,12 @@
-package Utilities;
+package utilities;
 
-import Pages.parent;
+import pages.Parent;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class baseDriver {
+public class BaseDriver {
 
     private static ThreadLocal<WebDriver> threadDriver=new ThreadLocal<>();
     public  static ThreadLocal<String> threadBrowserName=new ThreadLocal<>();
@@ -37,7 +37,7 @@ public class baseDriver {
 
     public static void driverQuit()
     {
-        parent.waiting(5);
+        Parent.waiting(5);
 
         if (threadDriver.get()!=null)
         {

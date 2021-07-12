@@ -1,15 +1,16 @@
-package StepDefinitions;
-import Pages.leftNav;
-import Pages.parent;
+package stepDefinitions;
+import pages.DialogContent;
+import pages.LeftNav;
+import pages.Parent;
 import cucumber.api.java.en.*;
 
-public class createAndDeleteCountrySteps extends parent {
+public class CreateAndDeleteCountrySteps extends Parent {
 
 
- private final Pages.dialogContent dialogContent;
- private final leftNav leftNav;
+ private final DialogContent dialogContent;
+ private final LeftNav leftNav;
 
-   public createAndDeleteCountrySteps(Pages.dialogContent dialogContent, Pages.leftNav leftNav) {
+   public CreateAndDeleteCountrySteps(DialogContent dialogContent, LeftNav leftNav) {
       this.dialogContent = dialogContent;
       this.leftNav = leftNav;
    }

@@ -1,15 +1,15 @@
-package StepDefinitions;
+package stepDefinitions;
 
-import Pages.leftNav;
-import Pages.parent;
+import pages.LeftNav;
+import pages.Parent;
 import cucumber.api.java.en.And;
 
-public class createAndDeleteCitySteps extends parent {
+public class CreateAndDeleteCitySteps extends Parent {
 
 
-    private final leftNav leftNav;
+    private final LeftNav leftNav;
 
-    public createAndDeleteCitySteps(Pages.leftNav leftNav) {
+    public CreateAndDeleteCitySteps(LeftNav leftNav) {
         this.leftNav = leftNav;
     }
 

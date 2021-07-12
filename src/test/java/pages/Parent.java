@@ -1,6 +1,6 @@
-package Pages;
+package pages;
 
-import Utilities.baseDriver;
+import utilities.BaseDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -13,13 +13,13 @@ import org.testng.Assert;
 
 import java.util.List;
 
-public class parent {
+public class Parent {
 
 
     static WebDriverWait wait;
 
-    public parent() {
-        wait = new WebDriverWait(baseDriver.getDriver(), 15);
+    public Parent() {
+        wait = new WebDriverWait(BaseDriver.getDriver(), 15);
     }
 
     public void findAndSend(WebElement element, String value) {
@@ -40,12 +40,12 @@ public class parent {
     }
 
     public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) baseDriver.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) BaseDriver.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
     public void scrollToUpElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) baseDriver.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) BaseDriver.getDriver();
         js.executeScript("arguments[0].setAttribute('style', 'top:0px')", element);
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
@@ -81,12 +81,12 @@ public class parent {
     }
 
     public void escClick() {
-        Actions actions = new Actions(baseDriver.getDriver());
+        Actions actions = new Actions(BaseDriver.getDriver());
         Action action = actions.sendKeys(Keys.ESCAPE).build();
         action.perform();
     }
     public void findAndDelete(WebElement... elements) {
-        wait.until(ExpectedConditions.stalenessOf(baseDriver.getDriver().findElement(By.xpath("//ms-delete-button//button"))));
+        wait.until(ExpectedConditions.stalenessOf(BaseDriver.getDriver().findElement(By.xpath("//ms-delete-button//button"))));
         waitNumberOfElementsToBeLessThan(By.xpath("//ms-delete-button//button"), 5);
         findAndClick(elements[0]);
         findAndClick(elements[1]);
