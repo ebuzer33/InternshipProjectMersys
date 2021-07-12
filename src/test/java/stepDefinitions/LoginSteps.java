@@ -1,8 +1,8 @@
-package StepDefinitions;
+package stepDefinitions;
 
-import Pages.loginPage;
-import Utilities.baseDriver;
-import XmlFiles.excelUtility;
+import pages.LoginPage;
+import utilities.BaseDriver;
+import xmlFiles.ExcelUtility;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,17 +11,17 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 
-public class loginSteps {
+public class LoginSteps {
 
-    private final loginPage login;
+    private final LoginPage login;
 
-    public loginSteps(loginPage login) {
+    public LoginSteps(LoginPage login) {
         this.login = login;
     }
 
     @Given("^Navigate to website$")
     public void navigateToWebsite() {
-        WebDriver driver = baseDriver.getDriver();
+        WebDriver driver = BaseDriver.getDriver();
         driver.get("https://demo.mersys.io/");
         driver.manage().window().maximize();
     }
@@ -29,7 +29,7 @@ public class loginSteps {
     @When("^Enter username and password$")
     public void enterUsernameAndPassword() {
 
-        List<List<String>> list = excelUtility.getListData("src/test/java/Resources/Mersys_Demo.xlsx", "correctLogin", 2);
+        List<List<String>> list = ExcelUtility.getListData("src/test/java/Resources/Mersys_Demo.xlsx", "correctLogin", 2);
 
         for (int i = 0; i < list.size(); i++) {
             login.findAndSend(login.getUserName(), list.get(i).get(0));
@@ -55,7 +55,7 @@ public class loginSteps {
     @When("^Enter wrong username and password$")
     public void enterWrongUsernameAndPassword() {
 
-        List<List<String>> list = excelUtility.getListData("src/test/java/Resources/Mersys_Demo.xlsx", "wrongLogin", 2);
+        List<List<String>> list = ExcelUtility.getListData("src/test/java/Resources/Mersys_Demo.xlsx", "wrongLogin", 2);
 
         for (int i = 0; i < list.size(); i++) {
             login.findAndSend(login.getUserName(), list.get(i).get(0));

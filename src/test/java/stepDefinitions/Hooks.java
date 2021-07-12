@@ -1,7 +1,7 @@
-package StepDefinitions;
+package stepDefinitions;
 
-import Utilities.baseDriver;
-import XmlFiles.excelUtility;
+import utilities.BaseDriver;
+import xmlFiles.ExcelUtility;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class hooks {
+public class Hooks {
 
     @Before
     public void before(Scenario scenario)
@@ -36,7 +36,7 @@ public class hooks {
 
         if (scenario.isFailed())
         {
-            TakesScreenshot screenshot=(TakesScreenshot) baseDriver.getDriver();
+            TakesScreenshot screenshot=(TakesScreenshot) BaseDriver.getDriver();
             File targetFile= screenshot.getScreenshotAs(OutputType.FILE);
 
             try {
@@ -49,9 +49,9 @@ public class hooks {
             }
         }
 
-        excelUtility.writeExcel("src/test/java/Resources/scenarioStatus.xlsx",
-                scenario, baseDriver.threadBrowserName.get(), dateTime.format(formatter));
+        ExcelUtility.writeExcel("src/test/java/Resources/scenarioStatus.xlsx",
+                scenario, BaseDriver.threadBrowserName.get(), dateTime.format(formatter));
 
-        baseDriver.driverQuit();
+        BaseDriver.driverQuit();
     }
 }

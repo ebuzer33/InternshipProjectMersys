@@ -1,4 +1,4 @@
-package XmlFiles;
+package xmlFiles;
 
 import cucumber.api.Scenario;
 import org.apache.poi.ss.usermodel.*;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class excelUtility {
+public class ExcelUtility {
 
     public static List<List<String>> getListData(String path, String sheetName, int columnCount) {
 

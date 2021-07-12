@@ -1,15 +1,15 @@
-package Pages;
+package pages;
 
-import Utilities.baseDriver;
+import utilities.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class leftNav extends parent{
+public class LeftNav extends Parent {
 
 
-    public leftNav() {
-        PageFactory.initElements(baseDriver.getDriver(),this);
+    public LeftNav() {
+        PageFactory.initElements(BaseDriver.getDriver(),this);
     }
 
 

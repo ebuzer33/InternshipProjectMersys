@@ -1,17 +1,17 @@
-package Pages;
+package pages;
 
-import Utilities.baseDriver;
+import utilities.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class dialogContent extends parent{
+public class DialogContent extends Parent {
 
 
-    public dialogContent() {
-        PageFactory.initElements(baseDriver.getDriver(), this);
+    public DialogContent() {
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
 
