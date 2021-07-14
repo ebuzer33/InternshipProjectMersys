@@ -15,7 +15,7 @@ public class DialogContent extends Parent {
     }
 
 
-    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
+    @FindBy(xpath = "//ms-table-toolbar//ms-add-button[contains(@class, 'ng-star-inserted')]//button")
     private WebElement addButton;
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
@@ -30,13 +30,13 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
-    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    @FindBy(xpath = "(//ms-text-field[contains(@id,'ms-text-field')]//input)[1]")
     private WebElement searchNameInput;
 
-    @FindBy(xpath = "//ms-search-button//button")
+    @FindBy(xpath = "//span[contains(text(),'Search')]")
     private WebElement searchButton;
 
-    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.CODE']//input")
+    @FindBy(xpath = "(//ms-text-field[contains(@id,'ms-text-field')]//input)[1]")
     private WebElement searchCodeInput;
 
     @FindBy(xpath = "//ms-delete-button//button")
@@ -46,17 +46,16 @@ public class DialogContent extends Parent {
     private WebElement deleteDialogButton;
 
     @FindBy(xpath = "(//mat-select[@role='combobox'])[3]")
-    private WebElement countrySelectAddClick;
+    private WebElement selectAddClick;
 
     @FindBy(xpath = "(//mat-select[@role='combobox'])[1]")
-    private WebElement countrySelectSearchClick;
+    private WebElement selectSearchClick;
 
     @FindBy(css = "div[role='listbox']>mat-option")
-    List<WebElement> selectOption;
+    private List<WebElement> selectOption;
 
     @FindBy(xpath = "(//div[@aria-live='polite'])[2]/div[2]")
     private WebElement ItemCantDeleteMessage;
-
 
     public WebElement getAddButton() {
         return addButton;
@@ -106,11 +105,11 @@ public class DialogContent extends Parent {
         return ItemCantDeleteMessage;
     }
 
-    public WebElement getCountrySelectAddClick() {
-        return countrySelectAddClick;
+    public WebElement getSelectAddClick() {
+        return selectAddClick;
     }
 
-    public WebElement getCountrySelectSearchClick() {
-        return countrySelectSearchClick;
+    public WebElement getSelectSearchClick() {
+        return selectSearchClick;
     }
 }

@@ -1,7 +1,7 @@
 package stepDefinitions;
 
 import utilities.BaseDriver;
-import xmlFiles.ExcelUtility;
+import utilities.ExcelUtility;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
