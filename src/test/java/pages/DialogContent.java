@@ -36,7 +36,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[contains(text(),'Search')]")
     private WebElement searchButton;
 
-    @FindBy(xpath = "(//ms-text-field[contains(@id,'ms-text-field')]//input)[1]")
+    @FindBy(xpath = "(//ms-text-field[contains(@id,'ms-text-field')]//input)[2]")
     private WebElement searchCodeInput;
 
     @FindBy(xpath = "//ms-delete-button//button")

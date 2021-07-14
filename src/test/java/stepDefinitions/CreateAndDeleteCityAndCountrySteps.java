@@ -14,7 +14,7 @@ public class CreateAndDeleteCityAndCountrySteps {
 
     @And("^Select a Country as \"([^\"]*)\" to Add$")
     public void selectACountryAsToAdd(String name) {
-        dialogContent.findAndClick(dialogContent.getCountrySelectAddClick());
+        dialogContent.findAndClick(dialogContent.getSelectAddClick());
         dialogContent.listSelectOption(dialogContent.getSelectOption(),name);
 
     }
@@ -27,7 +27,7 @@ public class CreateAndDeleteCityAndCountrySteps {
 
     @And("^Select a Country as \"([^\"]*)\" to Search$")
     public void selectACountryAsToSearch(String name)  {
-        dialogContent.findAndClick(dialogContent.getCountrySelectSearchClick());
+        dialogContent.findAndClick(dialogContent.getSelectSearchClick());
         dialogContent.listSelectOption(dialogContent.getSelectOption(),name);
 
     }
