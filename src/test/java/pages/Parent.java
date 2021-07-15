@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.List;
+import java.util.Random;
 
 public class Parent {
 
@@ -92,4 +93,16 @@ public class Parent {
         findAndClick(elements[1]);
 
     }
+    public void randomClick(List<WebElement> element) {
+        Random rnd = new Random();
+        int index = rnd.nextInt(element.size());
+        element.get(index).click();
+    }
+
+    public void waitUntilStalenessOf() {
+        WebDriverWait wait= new WebDriverWait(BaseDriver.getDriver(),10);
+        wait.until(ExpectedConditions.stalenessOf(BaseDriver.getDriver().findElement(By.xpath("//ms-edit-button//button"))));
+
+    }
+
 }

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class LeftNav extends Parent {
 
 
@@ -37,6 +39,21 @@ public class LeftNav extends Parent {
     @FindBy(css = "a[href='/subjects/list']")
     private WebElement subjects;
 
+    @FindBy(xpath = "//span[text()='Human Resources']")
+    private WebElement humanResources;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[3]")
+    private WebElement setupButtonInHumanResources;
+
+    @FindBy(xpath = "//span[text()='Salary Modifiers']")
+    private WebElement salaryModifiers;
+
+    @FindBy(xpath = "//span[text()='Salary Constants']")
+    private WebElement salaryConstants;
+
+    @FindBy(css = "div[role='listbox']>mat-option")
+    private List<WebElement> selectOption;
+
     public WebElement getSetupButtonInCountry() {
         return setupButtonInCountry;
     }
@@ -67,5 +84,25 @@ public class LeftNav extends Parent {
 
     public WebElement getSubjects() {
         return subjects;
+    }
+
+    public WebElement getHumanResources() {
+        return humanResources;
+    }
+
+    public WebElement getSetupButtonInHumanResources() {
+        return setupButtonInHumanResources;
+    }
+
+    public WebElement getSalaryModifiers() {
+        return salaryModifiers;
+    }
+
+    public WebElement getSalaryConstants() {
+        return salaryConstants;
+    }
+
+    public List<WebElement> getSelectOption() {
+        return selectOption;
     }
 }

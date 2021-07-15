@@ -5,12 +5,12 @@ import cucumber.api.java.en.And;
 import pages.DialogContent;
 import pages.LeftNav;
 
-public class CreateAndDeleteSubject {
+public class SubjectCreateAndDelete_Steps {
 
     private  final DialogContent dialogContent;
     private final LeftNav leftNav;
 
-    public CreateAndDeleteSubject(DialogContent dialogContent, LeftNav leftNav) {
+    public SubjectCreateAndDelete_Steps(DialogContent dialogContent, LeftNav leftNav) {
         this.dialogContent = dialogContent;
         this.leftNav = leftNav;
     }

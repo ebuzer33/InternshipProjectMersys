@@ -3,12 +3,12 @@ import pages.DialogContent;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 
-public class CreateAndDeleteCityAndCountrySteps {
+public class CityAndCountryCreateAndDelete_Steps {
 
 
     private final DialogContent dialogContent;
 
-    public CreateAndDeleteCityAndCountrySteps(DialogContent dialogContent) {
+    public CityAndCountryCreateAndDelete_Steps(DialogContent dialogContent) {
         this.dialogContent = dialogContent;
     }
 

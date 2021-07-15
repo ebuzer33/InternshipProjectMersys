@@ -3,11 +3,11 @@ package stepDefinitions;
 import cucumber.api.java.en.And;
 import pages.LeftNav;
 
-public class CreateAndDeleteSubjectCategoriesSteps {
+public class SubjectCategoriesCreateAndDelete_Steps {
 
     private final LeftNav leftNav;
 
-    public CreateAndDeleteSubjectCategoriesSteps(LeftNav leftNav) {
+    public SubjectCategoriesCreateAndDelete_Steps(LeftNav leftNav) {
         this.leftNav = leftNav;
     }
 
