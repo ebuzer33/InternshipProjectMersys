@@ -57,6 +57,15 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//div[@aria-live='polite'])[2]/div[2]")
     private WebElement ItemCantDeleteMessage;
 
+    @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Description']")
+    private WebElement searchDescriptionInput;
+
+    @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Variable']")
+    private WebElement searchVariableInput;
+
+    @FindBy(xpath = "//ms-edit-button//button")
+    private WebElement editButton;
+
     public WebElement getAddButton() {
         return addButton;
     }
@@ -109,7 +118,22 @@ public class DialogContent extends Parent {
         return selectAddClick;
     }
 
+    public WebElement getSearchDescriptionInput() {
+        return searchDescriptionInput;
+    }
+
+    public WebElement getSearchVariableInput() {
+        return searchVariableInput;
+    }
+
+    public WebElement getEditButton() {
+        return editButton;
+    }
+
     public WebElement getSelectSearchClick() {
         return selectSearchClick;
+
+
+
     }
 }

@@ -11,11 +11,11 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 
-public class LoginSteps {
+public class Login_Steps {
 
     private final LoginPage login;
 
-    public LoginSteps(LoginPage login) {
+    public Login_Steps(LoginPage login) {
         this.login = login;
     }
 

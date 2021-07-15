@@ -4,13 +4,13 @@ import pages.LeftNav;
 import pages.Parent;
 import cucumber.api.java.en.*;
 
-public class CreateAndDeleteCountrySteps extends Parent {
+public class CountryCreateAndDelete_Steps extends Parent {
 
 
  private final DialogContent dialogContent;
  private final LeftNav leftNav;
 
-   public CreateAndDeleteCountrySteps(DialogContent dialogContent, LeftNav leftNav) {
+   public CountryCreateAndDelete_Steps(DialogContent dialogContent, LeftNav leftNav) {
       this.dialogContent = dialogContent;
       this.leftNav = leftNav;
    }
