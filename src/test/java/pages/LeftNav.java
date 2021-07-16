@@ -54,6 +54,26 @@ public class LeftNav extends Parent {
     @FindBy(css = "div[role='listbox']>mat-option")
     private List<WebElement> selectOption;
 
+    @FindBy(xpath = "(//span[text()='Positions'])[1]")
+    private WebElement positionsButton;
+
+    @FindBy(xpath = "(//span[text()='Reports'])[4]")
+    private WebElement reportsButton;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[7]")
+    private WebElement reportsSetupButton;
+
+    @FindBy(xpath = "//span[text()='Excel Template']")
+    private WebElement excelTemplateButton;
+
+    @FindBy(xpath = "(//span[text()='Salary Types'])[1]")
+    private WebElement salaryTypesButton;
+
+    @FindBy(xpath = "(//span[text()='Position Salary'])[1]")
+    private WebElement positionSalary;
+
+
+
     public WebElement getSetupButtonInCountry() {
         return setupButtonInCountry;
     }
@@ -104,5 +124,29 @@ public class LeftNav extends Parent {
 
     public List<WebElement> getSelectOption() {
         return selectOption;
+    }
+
+    public WebElement getPositionsButton() {
+        return positionsButton;
+    }
+
+    public WebElement getReportsButton() {
+        return reportsButton;
+    }
+
+    public WebElement getReportsSetupButton() {
+        return reportsSetupButton;
+    }
+
+    public WebElement getExcelTemplateButton() {
+        return excelTemplateButton;
+    }
+
+    public WebElement getSalaryTypesButton() {
+        return salaryTypesButton;
+    }
+
+    public WebElement getPositionSalary() {
+        return positionSalary;
     }
 }

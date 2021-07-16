@@ -36,7 +36,7 @@ public class Parent {
         element.click();
     }
 
-    public static void waitUntilVisible(WebElement element) {
+    public  void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -88,6 +88,7 @@ public class Parent {
     }
     public void findAndDelete(WebElement... elements) {
         wait.until(ExpectedConditions.stalenessOf(BaseDriver.getDriver().findElement(By.xpath("//ms-delete-button//button"))));
+        waitUntilVisible(BaseDriver.getDriver().findElement(By.xpath("//ms-delete-button//button")));
         waitNumberOfElementsToBeLessThan(By.xpath("//ms-delete-button//button"), 5);
         findAndClick(elements[0]);
         findAndClick(elements[1]);
@@ -99,9 +100,10 @@ public class Parent {
         element.get(index).click();
     }
 
-    public void waitUntilStalenessOf() {
+    public  void waitUntilStalenessOf() {
         WebDriverWait wait= new WebDriverWait(BaseDriver.getDriver(),10);
-        wait.until(ExpectedConditions.stalenessOf(BaseDriver.getDriver().findElement(By.xpath("//ms-edit-button//button"))));
+       wait.until(ExpectedConditions.stalenessOf(BaseDriver.getDriver().findElement(By.xpath("//ms-edit-button//button"))));
+
 
     }
 

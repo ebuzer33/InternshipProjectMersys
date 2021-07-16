@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import pages.DialogContent;
 import pages.FormContent;
 import pages.LeftNav;
+import pages.Parent;
 
 public class SalaryModifierCreateEditAndDelete_Steps {
     private final LeftNav leftNav;
@@ -93,8 +94,6 @@ public class SalaryModifierCreateEditAndDelete_Steps {
 
     @And("^Click to Edit Button$")
     public void clickToEditButton() {
-
-
         dialogContent.waitUntilStalenessOf();
         dialogContent.findAndClick(dialogContent.getEditButton());
     }
