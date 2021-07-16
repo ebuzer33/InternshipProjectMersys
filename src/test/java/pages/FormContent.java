@@ -41,17 +41,47 @@ public class FormContent extends Parent {
     @FindBy(css = "ms-integer-field[placeholder='SALARY_CONSTANTS.FIELD.VALUE']>input")
     private WebElement formValueInput;
 
-    @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Valid From']")
-    private WebElement formValidFromClick;
-
-    @FindBy(xpath = "//tbody/tr/td[@role='gridcell']")
-    private List<WebElement> calendar;
-
     @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Name']")
     private WebElement formNameSearch;
 
     @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Key']")
     private WebElement formKeySearch;
+
+    @FindBy(xpath = "//mat-form-field//input")
+    private WebElement newPositionSalarySearchName;
+
+    @FindBy(xpath = "//ms-standard-button//button//fa-icon")
+    private WebElement positionSalary;
+
+    @FindBy(xpath = "//mat-form-field//input[@formcontrolname='name']")
+    private WebElement experienceRange;
+
+    @FindBy(xpath = "//div/mat-month-view/table/tbody//td[@role='gridcell']")
+    private List<WebElement> calendar;
+
+    @FindBy(xpath = "//div//button//span[contains(text(), 'Add')]")
+    private WebElement salaryPositionAdd;
+
+    @FindBy(xpath = "//ms-currency-field//input")
+    private WebElement EnterSalary;
+
+    @FindBy(xpath = "//ms-table-toolbar//ms-add-button[@tooltip='GENERAL.BUTTON.ADD']")
+    private WebElement positionSalaryAddPlus;
+
+    @FindBy(xpath = "//input[contains(@data-placeholder, 'From')]")
+    private WebElement dateClick;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='periodCount']//input")
+    private WebElement periodCount;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='rowSize']//input")
+    private WebElement rowSize;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='columnSize']//input")
+    private WebElement columnSize;
+
+    @FindBy(xpath = "//ms-button//button")
+    private WebElement addVersionButton;
 
     public WebElement getAddDescriptionInput() {
         return addDescriptionInput;
@@ -93,10 +123,6 @@ public class FormContent extends Parent {
         return formValueInput;
     }
 
-    public WebElement getFormValidFromClick() {
-        return formValidFromClick;
-    }
-
     public List<WebElement> getCalendar() {
         return calendar;
     }
@@ -107,5 +133,49 @@ public class FormContent extends Parent {
 
     public WebElement getFormKeySearch() {
         return formKeySearch;
+    }
+
+    public WebElement getNewPositionSalarySearchName() {
+        return newPositionSalarySearchName;
+    }
+
+    public WebElement getPositionSalary() {
+        return positionSalary;
+    }
+
+    public WebElement getExperienceRange() {
+        return experienceRange;
+    }
+
+    public WebElement getSalaryPositionAdd() {
+        return salaryPositionAdd;
+    }
+
+    public WebElement getEnterSalary() {
+        return EnterSalary;
+    }
+
+    public WebElement getPositionSalaryAddPlus() {
+        return positionSalaryAddPlus;
+    }
+
+    public WebElement getDateClick() {
+        return dateClick;
+    }
+
+    public WebElement getPeriodCount() {
+        return periodCount;
+    }
+
+    public WebElement getRowSize() {
+        return rowSize;
+    }
+
+    public WebElement getColumnSize() {
+        return columnSize;
+    }
+
+    public WebElement getAddVersionButton() {
+        return addVersionButton;
     }
 }

@@ -66,6 +66,24 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editButton;
 
+
+
+    @FindBy(xpath = "//mat-toolbar/div/div[1]/div[2]")
+    private WebElement backButton;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement shortName;
+
+    @FindBy(xpath = "//mat-form-field//ms-text-field//input[1]")
+    private WebElement positionsSearchname;
+
+    @FindBy(xpath = "//mat-chip-list//input")
+    private WebElement salaryTypesUserTypeClick;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='title']//input")
+    private WebElement newPositionSalaryAddName;
+
+
     public WebElement getAddButton() {
         return addButton;
     }
@@ -133,7 +151,25 @@ public class DialogContent extends Parent {
     public WebElement getSelectSearchClick() {
         return selectSearchClick;
 
+    }
 
+    public WebElement getBackButton() {
+        return backButton;
+    }
 
+    public WebElement getShortName() {
+        return shortName;
+    }
+
+    public WebElement getPositionsSearchname() {
+        return positionsSearchname;
+    }
+
+    public WebElement getSalaryTypesUserTypeClick() {
+        return salaryTypesUserTypeClick;
+    }
+
+    public WebElement getNewPositionSalaryAddName() {
+        return newPositionSalaryAddName;
     }
 }

@@ -30,7 +30,7 @@ public class SalaryConstantsEditAndDelete_Steps {
 
     @And("^Add a Random Date$")
     public void addARandomDate() {
-        formContent.findAndClick(formContent.getFormValidFromClick());
+        formContent.findAndClick(formContent.getDateClick());
         formContent.randomClick(formContent.getCalendar());
     }
 
