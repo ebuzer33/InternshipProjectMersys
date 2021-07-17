@@ -39,7 +39,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//ms-text-field[contains(@id,'ms-text-field')]//input)[2]")
     private WebElement searchCodeInput;
 
-    @FindBy(xpath = "//ms-delete-button//button")
+    @FindBy(xpath = "(//ms-delete-button//button)")
     private WebElement deleteButton;
 
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
@@ -63,8 +63,21 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//mat-form-field//input[@data-placeholder='Variable']")
     private WebElement searchVariableInput;
 
-    @FindBy(xpath = "//ms-edit-button//button")
+    @FindBy(xpath = "(//ms-edit-button//button)")
     private WebElement editButton;
+
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.DESCRIPTION']/input")
+    private WebElement descriptionBudgetGroupsSearch;
+
+    @FindBy(xpath = "(//mat-select[@role='combobox']/div)[1]")
+    private WebElement statusBudgetGroupClickSearch;
+
+    @FindBy(xpath = "//tbody[@class='mat-calendar-body']/tr/td")
+    private List<WebElement> selectDateBudgetGroups;
+
+
+
+
 
     public WebElement getAddButton() {
         return addButton;
@@ -132,8 +145,17 @@ public class DialogContent extends Parent {
 
     public WebElement getSelectSearchClick() {
         return selectSearchClick;
-
-
-
     }
+
+    public WebElement getDescriptionBudgetGroupsSearch() {
+        return descriptionBudgetGroupsSearch;
+    }
+
+    public WebElement getStatusBudgetGroupClickSearch() {
+        return statusBudgetGroupClickSearch;
+    }
+
+    public List<WebElement> getSelectDateBudgetGroups() {   return selectDateBudgetGroups;  }
+
+
 }
