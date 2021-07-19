@@ -83,6 +83,34 @@ public class FormContent extends Parent {
     @FindBy(xpath = "//ms-button//button")
     private WebElement addVersionButton;
 
+
+    @FindBy(xpath = " //ms-text-field[@name='description']/input")
+    private WebElement descriptionInBudgetGroupAdd;
+
+    @FindBy(xpath = " (//mat-select/div)[3]")
+    private WebElement statusClick;
+
+    @FindBy(xpath = "//mat-option/span")
+    private List<WebElement> selectOptionStatus;
+
+    @FindBy(xpath = "  ((//mat-form-field/div)[6]/div)[1]")
+    private WebElement startDateInBudget;
+
+    @FindBy(xpath = "  ((//mat-form-field/div)[7]/div)[1]")
+    private WebElement endDateInBudget;
+
+    @FindBy(xpath = "//mat-select[@formcontrolname='type']")
+    private WebElement typeinCostCenterClick;
+
+    @FindBy(xpath = "//mat-option[@role='option']/span")
+    private List<WebElement> typeSeleckoptionInCostCenter;
+
+    @FindBy(xpath = "//ms-text-field[@type='number']")
+    private WebElement sendOrderNoInCostCenter;
+
+    @FindBy(xpath = "//mat-chip-list/div/input[@placeholder='Expense account code prefixes']")
+    private WebElement expenseAccountCodeInCostCenter;
+
     public WebElement getAddDescriptionInput() {
         return addDescriptionInput;
     }
@@ -177,5 +205,41 @@ public class FormContent extends Parent {
 
     public WebElement getAddVersionButton() {
         return addVersionButton;
+    }
+
+    public WebElement getDescriptionInBudgetGroupAdd() {
+        return descriptionInBudgetGroupAdd;
+    }
+
+    public WebElement getStatusClick() {
+        return statusClick;
+    }
+
+    public List<WebElement> getSelectOptionStatus() {
+        return selectOptionStatus;
+    }
+
+    public WebElement getStartDateInBudget() {
+        return startDateInBudget;
+    }
+
+    public WebElement getEndDateInBudget() {
+        return endDateInBudget;
+    }
+
+    public WebElement getTypeinCostCenterClick() {
+        return typeinCostCenterClick;
+    }
+
+    public List<WebElement> getTypeSeleckoptionInCostCenter() {
+        return typeSeleckoptionInCostCenter;
+    }
+
+    public WebElement getSendOrderNoInCostCenter() {
+        return sendOrderNoInCostCenter;
+    }
+
+    public WebElement getExpenseAccountCodeInCostCenter() {
+        return expenseAccountCodeInCostCenter;
     }
 }

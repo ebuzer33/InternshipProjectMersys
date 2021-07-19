@@ -66,8 +66,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//ms-edit-button//button")
     private WebElement editButton;
 
-
-
     @FindBy(xpath = "//mat-toolbar/div/div[1]/div[2]")
     private WebElement backButton;
 
@@ -82,6 +80,16 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='title']//input")
     private WebElement newPositionSalaryAddName;
+
+    @FindBy(xpath = "//ms-text-field[@placeholder='GENERAL.FIELD.DESCRIPTION']/input")
+    private WebElement descriptionBudgetGroupsSearch;
+
+    @FindBy(xpath = "(//mat-select[@role='combobox']/div)[1]")
+    private WebElement statusBudgetGroupClickSearch;
+
+    @FindBy(xpath = "//tbody[@class='mat-calendar-body']/tr/td")
+    private List<WebElement> selectDateBudgetGroups;
+
 
 
     public WebElement getAddButton() {
@@ -148,10 +156,7 @@ public class DialogContent extends Parent {
         return editButton;
     }
 
-    public WebElement getSelectSearchClick() {
-        return selectSearchClick;
-
-    }
+    public WebElement getSelectSearchClick() {    return selectSearchClick;    }
 
     public WebElement getBackButton() {
         return backButton;
@@ -171,5 +176,17 @@ public class DialogContent extends Parent {
 
     public WebElement getNewPositionSalaryAddName() {
         return newPositionSalaryAddName;
+    }
+
+    public WebElement getDescriptionBudgetGroupsSearch() {
+        return descriptionBudgetGroupsSearch;
+    }
+
+    public WebElement getStatusBudgetGroupClickSearch() {
+        return statusBudgetGroupClickSearch;
+    }
+
+    public List<WebElement> getSelectDateBudgetGroups() {
+        return selectDateBudgetGroups;
     }
 }
