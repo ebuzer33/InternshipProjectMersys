@@ -45,12 +45,6 @@ public class Parent {
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public void scrollToUpElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) BaseDriver.getDriver();
-        js.executeScript("arguments[0].setAttribute('style', 'top:0px')", element);
-        js.executeScript("arguments[0].scrollIntoView();", element);
-    }
-
     public void waitUntilClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
@@ -81,11 +75,6 @@ public class Parent {
         }
     }
 
-    public void escClick() {
-        Actions actions = new Actions(BaseDriver.getDriver());
-        Action action = actions.sendKeys(Keys.ESCAPE).build();
-        action.perform();
-    }
     public void findAndDelete(WebElement... elements) {
         wait.until(ExpectedConditions.stalenessOf(BaseDriver.getDriver().findElement(By.xpath("//ms-delete-button//button"))));
         waitUntilVisible(BaseDriver.getDriver().findElement(By.xpath("//ms-delete-button//button")));
