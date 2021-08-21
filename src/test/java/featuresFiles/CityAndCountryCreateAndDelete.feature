@@ -3,9 +3,10 @@ Feature: Create and Delete Country and City Functionality
   Background:
     Given Navigate to website
     When Enter username and password
+    And Click to accept cookies
     And Click to login button
     Then User should be login successfully
-    And Click to accept cookies
+
 
   Scenario: create a country
     When Click to Setup button
