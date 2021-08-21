@@ -3,8 +3,8 @@ Feature:
   Background:
     Given Navigate to website
     When Enter username and password
-    And Click to login button
     And Click to accept cookies
+    And Click to login button
     Then User should be login successfully
     And Click to Education
     And Click on Setup under Education

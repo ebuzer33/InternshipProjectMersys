@@ -1,10 +1,10 @@
-Feature:  Create And Edite And Delete Excel Template Functionality
+Feature:  Create And Edit And Delete Excel Template Functionality
   Background:
     Given Navigate to website
     When Enter username and password
+    And Click to accept cookies
     And Click to login button
     Then User should be login successfully
-    And Click to accept cookies
     And Click to Reports
     And Click to Setup of Reports
     And Click to Excel Template

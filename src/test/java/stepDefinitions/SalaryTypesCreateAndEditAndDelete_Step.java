@@ -22,8 +22,8 @@ public class SalaryTypesCreateAndEditAndDelete_Step {
         dialogContent.findAndSend(dialogContent.getNameInput(),newName);
     }
 
-    @And("^Clickt to Salary Types button$")
-    public void clicktToSalaryTypesButton() {
+    @And("^Click to Salary Types button$")
+    public void clickToSalaryTypesButton() {
         leftNav.findAndClick(leftNav.getSalaryTypesButton());
     }
 
@@ -43,4 +43,6 @@ public class SalaryTypesCreateAndEditAndDelete_Step {
     public void enterANameOfSalaryTypesToSearch(String searchName)  {
         formContent.findAndSend(formContent.getNewPositionSalarySearchName(),searchName);
     }
+
+
 }

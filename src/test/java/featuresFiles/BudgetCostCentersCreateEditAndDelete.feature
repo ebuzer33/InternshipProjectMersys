@@ -3,9 +3,9 @@ Feature:
   Background:
     Given Navigate to website
     When Enter username and password
+    And Click to accept cookies
     And Click to login button
     Then User should be login successfully
-    And Click to accept cookies
     And Click to Budget
     And Click to Setup under Budget
     And Click Cost Centers

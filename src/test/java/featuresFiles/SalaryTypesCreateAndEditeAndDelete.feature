@@ -3,12 +3,12 @@ Feature: Create And Edit And Delete Salary Types Functionality
   Background:
     Given Navigate to website
     When Enter username and password
+    And Click to accept cookies
     And Click to login button
     Then User should be login successfully
-    And Click to accept cookies
     And Click to Human Resources Button
     And Click on Setup under Human Resources
-    And Clickt to Salary Types button
+    And Click to Salary Types button
 
   Scenario: Create
     And Click to Add Button
